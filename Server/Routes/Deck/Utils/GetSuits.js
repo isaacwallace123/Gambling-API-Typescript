@@ -1,0 +1,1 @@
+module.exports = ["Spades","Hearts","Clubs","Diamonds"];

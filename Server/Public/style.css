@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root {
+    --main-background-color: #161616;
+    --secondary-background-color: #252525;
+    --tertiary-background-color: #202020;
+
+    --main-text-color: #FFFFFF;
+    --secondary-text-color: #7a7a7a;
+
+    --main-active-color: #FFFFFF;
+    --main-inactive-color: rgb(189, 189, 189);
+
+    --main-get-color: #61affe;
+    --main-post-color: #49cc90;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+    background-color: var(--main-background-color);
+}
+
+header {
+    font-family: '', sans-serif;
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+}
+
+main {
+    overflow-x: hidden;
+    background-color: var(--secondary-background-color);
+    color: var(--main-text-color);
+    padding: 1.5rem;
+}
+
+footer {
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+}
+
+pre {
+    margin: 0;
+}
+
+code {
+    padding: 0;
+    margin: 0;
+}
+
+.accordion {
+    --bs-accordion-border-radius: 10px;
+    --bs-accordion-inner-border-radius: 10px;
+    --bs-accordion-border-width: 0rem;
+
+    --bs-accordion-active-color: var(--main-active-color);
+    --bs-accordion-active-bg: var(--main-background-color);
+
+    --bs-accordion-btn-color: var(--main-inactive-color);
+    --bs-accordion-color: var(--main-text-color);
+
+    --bs-accordion-bg: var(--tertiary-background-color);
+    --bs-accordion-btn-bg: var(--main-background-color);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+
+.GET {
+    --bs-accordion-border-width: 0.1rem;
+    --bs-accordion-border-color: var(--main-get-color);
+}
+
+.POST {
+    --bs-accordion-border-width: 0.1rem;
+    --bs-accordion-border-color: var(--main-post-color);
+}
+
+.badge-GET {
+    background-color: var(--main-get-color);
+    margin-right: 0.5rem;
+}
+
+.badge-POST {
+    background-color: var(--main-post-color);
+    margin-right: 0.5rem;
+}
+
+#API_LIST {
+    margin: auto;
+    padding: 0 10%;
+}
+
+#Service {
+    background-color: var(--tertiary-background-color);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid var(--main-background-color);
+    margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    #API_LIST {
+        margin: auto;
+        padding: 0;
+    }
+}

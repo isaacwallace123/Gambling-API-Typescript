@@ -1,0 +1,28 @@
+<div class="accordion-item <%= Info.type %> rounded">
+    <h2 class="accordion-header" id="heading<%=Info.name%>">
+        <button class="accordion-button collapsed rounded .accordion-button-<%= Info.type %>" type="button" data-bs-toggle="collapse"
+            data-bs-target="#<%= Info.name.replaceAll(' ', '') %>" aria-expanded="false"
+            aria-controls="<%= Info.name.replaceAll(' ', '') %>">
+
+            <span class="badge badge-<%= Info.type %> mr-2"><%= Info.type %></span>
+            <p class="h5" style="margin: auto 0;">
+                <%=Info.path%>
+            </p>
+        </button>
+    </h2>
+
+    <div id="<%= Info.name.replaceAll(' ', '') %>" class="accordion-collapse collapse rounded"
+        aria-labelledby="heading<%=Info.name%>" data-bs-parent="#<%= Service %>">
+        <div class="accordion-body">
+            <h5 style="margin-bottom: 0.5rem;"><b>Description:</b></h5>
+            <p><%=Info.description%></p>
+
+            <hr>
+
+            <h5 style="margin-bottom: 0.5rem;"><b>Output:</b></h5>
+            <p style="margin-bottom: 1rem;">The following is the output you should get when running the API.</p>
+
+            <pre class="fluid-container rounded p-0 py-1 text-break fs-6" style="background-color: #1a1b26;"><code class="language-JSON" style="padding: 0; padding-left: 1rem;"><textarea disabled><%= Info.example %></textarea></code></pre>
+        </div>
+    </div>
+</div>
